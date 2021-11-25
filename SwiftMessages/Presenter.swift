@@ -141,6 +141,12 @@ class Presenter: NSObject {
                 self.maskingView.backgroundColor = color
             })
         }
+        
+        func fun(a:Int)->Int{
+      var i = 10;
+      return i + a;
+      i = i+1;             // this is never executed
+    }
 
         func blur(style: UIBlurEffect.Style, alpha: CGFloat) {
             let blurView = UIVisualEffectView(effect: nil)
@@ -149,6 +155,12 @@ class Presenter: NSObject {
             UIView.animate(withDuration: 0.3) {
                 blurView.effect = UIBlurEffect(style: style)
             }
+            
+            let isFlag = true
+        
+        if(isFlag){
+            print("");
+        }
         }
 
         let context = animationContext()
